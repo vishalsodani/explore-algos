@@ -2,7 +2,7 @@ import math
 
 n = 5 
 space = ' '
-#test
+
 def print_pascals_traingle():
     """
     Using the idea that each line of a pascal's traingle can be created by 
