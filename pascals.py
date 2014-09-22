@@ -1,7 +1,8 @@
 import math
 
 n = 5 
-
+space = ' '
+#test
 def print_pascals_traingle():
     """
     Using the idea that each line of a pascal's traingle can be created by 
@@ -16,13 +17,13 @@ def print_pascals_traingle():
         total_spaces_to_print = (n - line_no - 1)
         numbers_printed_counter = 1
         to_print = ''
-        to_print += total_spaces_to_print * ' '
+        to_print += total_spaces_to_print * space
         for ff in pascal_number:
             to_print += ff
             if numbers_printed_counter < total_no_to_print:
                 to_print += ' '
                 numbers_printed_counter += 1
-        to_print += total_spaces_to_print * ' '
+        to_print += total_spaces_to_print * space
         print(to_print)
 
 print_pascals_traingle()
