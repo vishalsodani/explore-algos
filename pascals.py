@@ -1,13 +1,17 @@
 import math
 
-n = 5 
-space = ' '
+n = 5
+
+
+def add_empty_spaces(number):
+    return number * ' '
+
 
 def print_pascals_traingle():
     """
-    Using the idea that each line of a pascal's traingle can be created by 
+    Using the idea that each line of a pascal's traingle can be created by
     raising 11 to some power; but breaks down after the 5th line
-    Another observation is that the number of spaces in the begining and 
+    Another observation is that the number of spaces in the begining and
     in the end decrease as we go down the triangle
     """
     for line_no in range(0, n):
@@ -17,13 +21,13 @@ def print_pascals_traingle():
         total_spaces_to_print = (n - line_no - 1)
         numbers_printed_counter = 1
         to_print = ''
-        to_print += total_spaces_to_print * space
+        to_print += add_empty_spaces(total_spaces_to_print)
         for ff in pascal_number:
             to_print += ff
             if numbers_printed_counter < total_no_to_print:
-                to_print += ' '
+                to_print += add_empty_spaces(1)
                 numbers_printed_counter += 1
-        to_print += total_spaces_to_print * space
+        to_print += add_empty_spaces(total_spaces_to_print)
         print(to_print)
 
 print_pascals_traingle()
